@@ -1,0 +1,53 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(0, 0, 0, 0.0);
+    font-family: "JetBrainsMono Nerd Font", "sans-serif";
+}
+
+button {
+	border-color: #cba6f7;
+	text-decoration-color: #cba6f7;
+	color: #cba6f7;
+	background-color: #1e1e2e;
+	border-style: solid;
+	border-width: 2px;
+    border-radius: 15px;
+	background-repeat: no-repeat;
+	background-position: 50% 45%;
+	background-size: 18%;
+    margin: 13px;
+}
+
+button:focus, button:active, button:hover {
+	/* 20% Overlay 2, 80% mantle */
+	background-color: #181825;
+	outline-style: none;
+}
+
+#lock {
+    background-image: url("/usr/share/wlogout/icons/lock.png");
+}
+
+#logout {
+    background-image: url("/usr/share/wlogout/icons/logout.png");
+}
+
+#suspend {
+    background-image: url("/usr/share/wlogout/icons/suspend.png");
+}
+
+#hibernate {
+    background-image: url("/usr/share/wlogout/icons/hibernate.png");
+}
+
+#shutdown {
+    background-image: url("/usr/share/wlogout/icons/shutdown.png");
+}
+
+#reboot {
+    background-image: url("/usr/share/wlogout/icons/reboot.png");
+}
