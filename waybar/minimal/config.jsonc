@@ -55,6 +55,7 @@
   "clock": {
     "markup": "pango",
     "format": "<span color='#cdd6f4'>{:%b %d / %I:%M %p}</span>",
+    "on-click": "swaync-client -t",
     "tooltip": false
   },
 
@@ -63,11 +64,10 @@
     "interface": "wlan0",
     "format-wifi": "<span color='#cba6f7'>󰖩</span> <span color='#cdd6f4'>{essid}</span> <span color='#cdd6f4'>{ipaddr}</span>",
     "format-ethernet": "<span color='#cba6f7'></span> <span color='#cdd6f4'>{ipaddr}</span> <span color='#cdd6f4'></span>",
-    "format-disconnected": "<span color='#cba6f7'>󰌙 </span> <span color='#cdd6f4'>disconnected</span>",
+    "format-disconnected": "<span color='#cba6f7'>󰤭 </span> <span color='#cdd6f4'>disconnected</span>",
+    "on-click":" kitty -e nmtui",
     "tooltip": true,
-    "interval": 1,
-    "min-length": 25,
-    "max-length": 25
+    "interval": 1
   },
 
   "battery": {
@@ -83,7 +83,7 @@
       "critical": 10
     },
     "tooltip": false,
-    "on-click": "2"
+    "on-click": ""
   },
 
   "pulseaudio": {
