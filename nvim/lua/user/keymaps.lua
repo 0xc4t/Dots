@@ -1,0 +1,7 @@
+vim.keymap.set("n", "<C-z>", "u", { noremap = true, silent = true, desc = "Undo" })
+vim.keymap.set("n", "<C-y>", "<C-r>", { noremap = true, silent = true, desc = "Redo" })
+vim.keymap.set("n", "<C-l>", ":vsplit<CR>", { noremap = true, silent = true, desc = "Vertical Split" })
+vim.keymap.set("n", "<C-Left>", "<C-w>h", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Right>", "<C-w>l", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Down>", "<C-w>j", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Up>", "<C-w>k", { noremap = true, silent = true })
