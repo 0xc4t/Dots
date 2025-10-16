@@ -1,17 +1,17 @@
 * {
     bg: #1e1e2e;
-    hv: #cba6f7;
-    primary: #cba6f7;
-    ug: #cba6f7;
-    font: "Jetbrains Mono Nerd Font 12";
+    hv: #cdd6f4;
+    primary: #cdd6f4;
+    ug: #cdd6f4;
+    font: "Jetbrains Mono Nerd Font 13";
     background-color: @bg;
-    kl: #cba6f7;
+    kl: #cdd6f4;
     black: #000000;
     transparent: rgba(46,52,64,0);
 }
 
 window {
-    width: 700;
+    width: 400;
     //height: 500;
     orientation: horizontal;
     location: center;
@@ -71,6 +71,7 @@ element {
     vertical-align: 1;
     color: @kl;
     font: inherit;
+    padding: 5px 10px;
 }
 
 element-text {
