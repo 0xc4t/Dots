@@ -14,9 +14,9 @@ configuration {
   foreground: #f8f8f2;
   foreground-alt: #f8f8f2;
   Comment: #6272a4;
-  selected: #cba6f7;
-  Pink: #cba6f7;
-  Purple: #cba6f7;
+  selected: #b4befe;
+  Pink: #b4befe;
+  Purple: #b4befe;
   background-color: @background;
   text-color: @Purple;
 }

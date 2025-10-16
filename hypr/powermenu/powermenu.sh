@@ -11,7 +11,7 @@ $sleep
 $shutdown" | rofi -dmenu\
                   -i\
                   -p "Power"\
-		 -theme "/home/0xc4t/.config/polybar/scripts/powermenu/powermenu.rasi")
+		 -theme "/home/0xc4t/.config/hypr/powermenu/powermenu.rasi")
 
 if [ "$selected_option" == "$lock" ]
 then
