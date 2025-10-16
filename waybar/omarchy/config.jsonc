@@ -8,6 +8,7 @@
   "modules-center": ["clock"],
   "modules-right": [
     "group/tray-expander",
+    "bluetooth",
     "network",
     "pulseaudio",
     "cpu",
@@ -40,8 +41,8 @@
 
   "cpu": {
     "interval": 5,
-    "format": "",
-    "on-click": "kitty -e btop"
+    "format": "󰍛",
+    "on-click": "kitty -e htop"
   },
   "clock": {
     "markup": "pango",
@@ -54,7 +55,7 @@
     "format": "{icon}",
     "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
-    "format-disconnected": "󰖪",
+    "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -81,12 +82,20 @@
       "critical": 10
     }
   },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "bluemane-manager"
+  },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "pavucontrol",
+    "on-click": "$TERMINAL --class=Wiremix -e wiremix",
+    "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "󰝟",
+    "format-muted": "",
     "format-icons": {
       "default": ["", "", ""]
     }
@@ -101,8 +110,7 @@
   },
   "custom/expand-icon": {
     "format": " ",
-    "tooltip": false,
-    "on-click": "/home/0xc4t/.config/hypr/powermenu/powermenu.sh"
+    "tooltip": false
   },
   "tray": {
     "icon-size": 12,

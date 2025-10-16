@@ -29,8 +29,8 @@
 #clock,
 #custom {
   min-width: 10px;
-  margin: 6px;
-  padding: 3px;
+  margin: 0 5px;
+  padding: 2px;
 }
 
 #workspaces button {

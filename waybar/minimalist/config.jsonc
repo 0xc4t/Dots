@@ -11,10 +11,9 @@
     "clock"
   ],
   "modules-right": [
-    "custom/bluetooth",
+    "battery",
     "pulseaudio",
     "cpu",
-    "battery",
     "network",
     "custom/power"
   ],
@@ -49,7 +48,7 @@
   "cpu": {
     "markup": "pango",
     "interval": 15,
-    "format": "<span color='#cdd6f4'></span>",
+    "format": "<span color='#cdd6f4' size='13pt'></span>",
     "max-length": 10
   },
 
@@ -61,23 +60,26 @@
   },
 
   "network": {
-    "markup": "pango",
-    "interface": "wlan0",
-    "format-wifi": "<span color='#cdd6f4'>󰖩</span>",
-    "format-ethernet": "<span color='#bb9af7'></span>",
-    "format-disconnected": "<span color='#bb9af7'>󰤭 </span>",
-    "on-click":" kitty -e nmtui",
-    "tooltip": true,
-    "interval": 1
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "alacritty --class=Impala -e impala"
   },
 
   "battery": {
     "markup": "pango",
-    "format": "<span color='#bb9af7'>{icon} </span>",
-    "format-charging": "<span color='#bb9af7'></span>",
-    "format-full": "<span color='#cdd6f4'></span>",
+    "format": "<span color='#cdd6f4' size='13pt'>{icon}</span>",
+    "format-charging": "<span color='#cdd6f4' size='13pt'></span>",
+    "format-full": "<span color='#cdd6f4' size='13pt'></span>",
     "format-time": "{H}h{M}m",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": ["","","","",""],
     "interval": 1,
     "states": {
       "warning": 25,
@@ -88,20 +90,20 @@
   },
 
   "pulseaudio": {
-    "tooltip": false,
-    "scroll-step": 1,
-    "markup": "pango",
-    "format": "<span color='#cdd6f4'>{icon}</span>",
-    "format-muted": "<span color='#cdd6f4'></span>",
-    "on-click": "pavucontrol",
+    "format": "{icon}",
+    "on-click": "alacritty --class=Wiremix -e wiremix",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "󰝟",
     "format-icons": {
-      "default": [" ", "", " "],
+      "default": ["", "", ""]
     }
   },
 
   "custom/power": {
     "markup": "pango",
-    "format": "<span color='#cdd6f4'> ⏻ </span>",
+    "format": "<span color='#cba6f7' size='13pt'>  </span>",
     "tooltip": false,
     "on-click": "/home/0xc4t/.config/hypr/powermenu/powermenu.sh",
   },
@@ -120,3 +122,4 @@
     "spacing": 12
   }
 }
+
